@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Smiley Bakers | Luxury Patisserie</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#d2c4bc",
+                        "primary-container": "#3d2b1f",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#72575f",
+                        "on-surface": "#1a1c1a",
+                        "primary-fixed": "#fbddca",
+                        "surface-container-highest": "#e3e2e0",
+                        "on-primary-container": "#ac9181",
+                        "surface-dim": "#dbdad7",
+                        "on-secondary-fixed": "#2a161c",
+                        "on-secondary-container": "#795d65",
+                        "on-surface-variant": "#4f453f",
+                        "tertiary-container": "#3f2c00",
+                        "primary-fixed-dim": "#dec1af",
+                        "tertiary-fixed-dim": "#e9c176",
+                        "tertiary-fixed": "#ffdea5",
+                        "surface-variant": "#e3e2e0",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#dec1af",
+                        "primary": "#26170c",
+                        "on-primary-fixed-variant": "#574335",
+                        "on-tertiary-container": "#b5924c",
+                        "on-secondary-fixed-variant": "#594047",
+                        "surface-container-low": "#f4f3f1",
+                        "tertiary": "#251800",
+                        "on-tertiary-fixed": "#261900",
+                        "secondary-container": "#fed9e2",
+                        "secondary-fixed-dim": "#e0bec6",
+                        "surface": "#faf9f6",
+                        "inverse-surface": "#2f312f",
+                        "on-error-container": "#93000a",
+                        "outline": "#81756e",
+                        "surface-container": "#efeeeb",
+                        "surface-container-high": "#e9e8e5",
+                        "inverse-on-surface": "#f2f1ee",
+                        "surface-tint": "#705a4c",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#faf9f6",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#28180d",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#faf9f6",
+                        "on-background": "#1a1c1a",
+                        "on-tertiary-fixed-variant": "#5d4201",
+                        "secondary-fixed": "#fed9e2",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "stack-sm": "12px",
+                        "stack-xs": "4px",
+                        "section-padding": "120px",
+                        "container-max": "1280px",
+                        "stack-lg": "48px",
+                        "stack-md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Noto Serif"],
+                        "display-lg": ["Noto Serif"],
+                        "headline-md": ["Noto Serif"],
+                        "headline-lg": ["Noto Serif"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(250, 249, 246, 0) 0%, rgba(250, 249, 246, 1) 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#FAF9F6]/90 dark:bg-stone-950/90 backdrop-blur-xl border-b border-[#D4AF37]/20 flex justify-between items-center h-20 px-8 md:px-16 w-full shadow-[0_4px_30px_rgba(61,43,31,0.05)]">
+<div class="text-2xl font-serif italic text-[#3D2B1F] dark:text-[#D4AF37]">Smiley Bakers</div>
+<div class="hidden md:flex gap-8 items-center font-['Noto_Serif'] tracking-tight text-sm uppercase">
+<a class="text-[#D4AF37] border-b border-[#D4AF37] pb-1 hover:text-[#D4AF37] transition-all duration-500 ease-out" href="#">Home</a>
+<a class="text-[#3D2B1F]/70 dark:text-[#FAF9F6]/70 hover:text-[#D4AF37] transition-all duration-500 ease-out" href="#showcase">Showcase</a>
+<a class="text-[#3D2B1F]/70 dark:text-[#FAF9F6]/70 hover:text-[#D4AF37] transition-all duration-500 ease-out" href="#custom">Custom Cakes</a>
+<a class="text-[#3D2B1F]/70 dark:text-[#FAF9F6]/70 hover:text-[#D4AF37] transition-all duration-500 ease-out" href="#reviews">Reviews</a>
+<a class="text-[#3D2B1F]/70 dark:text-[#FAF9F6]/70 hover:text-[#D4AF37] transition-all duration-500 ease-out" href="#about">About</a>
+<a class="text-[#3D2B1F]/70 dark:text-[#FAF9F6]/70 hover:text-[#D4AF37] transition-all duration-500 ease-out" href="#contact">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary font-label-md px-6 py-3 rounded-full hover:shadow-lg scale-95 active:scale-90 transition-transform uppercase tracking-widest">
+            Order Now
+        </button>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Luxury tiered cake" class="w-full h-full object-cover" data-alt="A grand, multi-tiered artisanal wedding cake standing majestically in a bright, minimalist studio. The cake features delicate hand-painted gold leaf accents and intricate sugar-paste flowers in soft cream tones. The lighting is ethereal and high-key, highlighting the smooth, velvety texture of the buttercream frosting. The overall mood is sophisticated and celebratory, embodying the pinnacle of luxury patisserie design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaAPo-XohIdfEeJqnoauij3NdwMYthcHTRqgGnXD3LT1Vpk3M88MUTSztSiktlHYW_GTq_UdRCKwu77obWZ2x_Awzh5d-Sk0lrvokpAiNCx0rxrZ0X9-ILuHwDKZgrpxt0kCnxDRtXsa6zHNZTwKEs3K4WJ46kBgk4CDtS8qNQnt6X2eP8RJv9cR2F_lFXuQLxplA6zxF2WPNMakAhaWzgJfPkO18bKF4lBfQKbY4R36fmIO8E0QaJDJvbcZgWcQXfnbWqQbe9RDya"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="container mx-auto px-8 md:px-16 relative z-10">
+<div class="max-w-3xl">
+<span class="font-label-md text-on-tertiary-container bg-tertiary-fixed px-4 py-2 rounded-full mb-6 inline-block uppercase tracking-widest">Est. 2024 • Luxury Patisserie</span>
+<h1 class="font-display-lg text-primary mb-6">Freshly Baked <br/><span class="italic text-tertiary-fixed-dim">Happiness</span> Delivered</h1>
+<p class="font-body-lg text-on-surface-variant mb-10 max-w-xl">Experience the symphony of flavors where architecture meets confectionery. Every creation is a bespoke masterpiece designed for your most precious moments.</p>
+<div class="flex gap-6">
+<button class="bg-primary-container text-on-primary font-label-md px-8 py-4 rounded-xl hover:shadow-xl transition-all scale-100 active:scale-95">Explore Collections</button>
+<button class="border-2 border-on-tertiary-container text-on-tertiary-container font-label-md px-8 py-4 rounded-xl hover:bg-tertiary-fixed transition-all">Order Now</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Showcase / Products Section -->
+<section class="py-[120px] bg-background" id="showcase">
+<div class="container mx-auto px-8 md:px-16">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<h2 class="font-headline-xl text-primary mb-4 italic">Our Signature Gallery</h2>
+<p class="font-body-md text-on-surface-variant max-w-md">Each category represents a unique journey of taste, texture, and visual splendor.</p>
+</div>
+<div class="h-[1px] flex-grow bg-outline-variant mx-12 hidden md:block"></div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined p-3 border border-outline rounded-full cursor-pointer hover:bg-primary-container hover:text-on-primary transition-colors">arrow_back</span>
+<span class="material-symbols-outlined p-3 border border-outline rounded-full cursor-pointer hover:bg-primary-container hover:text-on-primary transition-colors">arrow_forward</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Birthday Cakes -->
+<div class="group relative bg-white rounded-2xl overflow-hidden shadow-[0_4px_30px_rgba(61,43,31,0.04)] hover:-translate-y-2 transition-transform duration-500">
+<div class="h-80 overflow-hidden">
+<img alt="Birthday Cake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A vibrant and playful birthday cake decorated with colorful macarons, chocolate drips, and fresh organic berries. The cake is shot in a bright, modern studio with soft pastel pink backgrounds. The lighting is warm and joyful, highlighting the rich textures of the chocolate and the glossy finish of the macarons. This image represents the festive and artistic approach to bespoke birthday celebrations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmQOsKTM1H_LHdrCw0XYKlxVw5ToLCCQij8VOOO6Of1AtMMDpbxlargJbyOjEYOKH7greomusSheTpGYwUpf8RURnJWSspUpWV6SCFauGLtpHXt0ddvNRHIvH0ozUVQX3JvamfZJTzxjnX6uAKsXTumdwvS25qZUDupKKityqZFMavvH_BEeLu97k2o9kwI43sLyZ6ry0gXLk_h0oH3gLi4Zb_CK8mG3FJyvXLpwxAPaZfTHyF9PgnWMIK0cRxi63Kakxf_oI2x_lZ"/>
+</div>
+<div class="p-8 text-center">
+<h3 class="font-headline-md text-primary mb-2">Birthday Cakes</h3>
+<p class="font-body-md text-on-surface-variant mb-4">Celebrations made unforgettable with custom palettes.</p>
+<span class="font-label-md text-tertiary-fixed-dim block mb-6 uppercase tracking-wider">From $85</span>
+<button class="w-full py-3 border border-outline-variant rounded-lg font-label-md hover:bg-primary-container hover:text-on-primary transition-colors">View Selection</button>
+</div>
+</div>
+<!-- Wedding Cakes -->
+<div class="group relative bg-white rounded-2xl overflow-hidden shadow-[0_4px_30px_rgba(61,43,31,0.04)] hover:-translate-y-2 transition-transform duration-500">
+<div class="h-80 overflow-hidden">
+<img alt="Wedding Cake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="An elegant three-tiered white wedding cake adorned with sophisticated gold leaf patterns and cascading fresh white roses. The setting is a refined, sunlit garden party during golden hour. The lighting is soft and romantic, casting long shadows and creating a dreamlike atmosphere. Every detail emphasizes the luxurious and timeless nature of a high-end wedding celebration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs8j0o_3ChvXLBpoAK2SgMr1ZlllMaquRk1SjL6He8MI5BbFGbJimJYVpHjmUlMd4Erpk41ntlYGWP1_hzeopj2S03yUuFqBR1RBXsZ2a_1aVh3zRsdJC5s9louPRsNx7bQGm1MbEAuKA4TSoA-JUBqambmBuZ7l0SfdUCRsbB1yWUQdDqn4JJdN0yGfOur_u6H_YDWkQjtwPKTnG3Gn8Cox9vfDVVZE0lxW1qZsM0WWkYNc0D5uCsGoVONPzuzRLgDRxPBYXV-T-b"/>
+</div>
+<div class="p-8 text-center">
+<h3 class="font-headline-md text-primary mb-2">Wedding Cakes</h3>
+<p class="font-body-md text-on-surface-variant mb-4">Elegance in every tier for your special day.</p>
+<span class="font-label-md text-tertiary-fixed-dim block mb-6 uppercase tracking-wider">Custom Quote</span>
+<button class="w-full py-3 border border-outline-variant rounded-lg font-label-md hover:bg-primary-container hover:text-on-primary transition-colors">Inquire Now</button>
+</div>
+</div>
+<!-- Custom Cakes -->
+<div class="group relative bg-white rounded-2xl overflow-hidden shadow-[0_4px_30px_rgba(61,43,31,0.04)] hover:-translate-y-2 transition-transform duration-500">
+<div class="h-80 overflow-hidden">
+<img alt="Custom Cake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A uniquely shaped, avant-garde custom cake with geometric fondant patterns in navy blue and gold accents. The cake is presented on a minimalist stone pedestal in a gallery-like setting. High-contrast lighting highlights the sharp angles and smooth surfaces of the design. This visual captures the 'confectionary architecture' philosophy of the brand, showcasing bold, modern artistry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBywETSbnhU24qcSLwkeZ4eKtreQ-7Uoms_lLLK77tPgBC0mwSEqW8T4taVYoa4-5CseCIPlhTduGbiA_zM22ZxFQL69BWdHq7UGSsOoUlt6FYVmzejcZ54OrsXjNa8j6i_b9tiRI1aVuRhUFhjIs3qFL6xw7t7qyxnRdywUyJeoLtckX3di6jO-hcC9IYSO5WAK2L1Dw744KIQJ_wjXWxEdgPLggvIDJvVhU8Gt9u0mPhb2HWfu6guJK8e1dtBNwobY0EH_rvmLg6r"/>
+</div>
+<div class="p-8 text-center">
+<h3 class="font-headline-md text-primary mb-2">Custom Cakes</h3>
+<p class="font-body-md text-on-surface-variant mb-4">Your imagination, brought to life in sugar.</p>
+<span class="font-label-md text-tertiary-fixed-dim block mb-6 uppercase tracking-wider">Bespoke</span>
+<button class="w-full py-3 border border-outline-variant rounded-lg font-label-md hover:bg-primary-container hover:text-on-primary transition-colors">Start Designing</button>
+</div>
+</div>
+<!-- Cupcakes -->
+<div class="group relative bg-white rounded-2xl overflow-hidden shadow-[0_4px_30px_rgba(61,43,31,0.04)] hover:-translate-y-2 transition-transform duration-500">
+<div class="h-80 overflow-hidden">
+<img alt="Gourmet Cupcakes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A collection of gourmet cupcakes topped with swirls of pastel-colored swiss meringue buttercream and sprinkled with edible gold dust. The cupcakes are arranged on a white marble surface with soft, diffused morning light. The color palette consists of soft pinks, creams, and gold. The image exudes a sense of delicate luxury and artisanal precision, focusing on the small-scale beauty of patisserie." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU3ccUXnUEglewFr3hBl3GliDfwkyAZLUD1xm03rVVJGTeEiaXskOKZbCrKGzi78Exc20i3C7nkdM6i1xW9g9a8NnKYnx0Jr38LkOX-bOBaYQuA_PV7t3A7kOk9_zSRZ1wro4z5a4FuwiKmzXt1XiXwIZ6wBnLmurFsqrajU36cnTe26gC5vUk03E669BTMB3J_Wv-UEY_zyGLO5bSX5tbR_eita3Rt44fM9pcTYuHBkG4Tz6KVTIUJXr1uD3ekJk6mQLfKnaOLCEg"/>
+</div>
+<div class="p-8 text-center">
+<h3 class="font-headline-md text-primary mb-2">Cupcakes</h3>
+<p class="font-body-md text-on-surface-variant mb-4">Bite-sized masterpieces for your daily indulgence.</p>
+<span class="font-label-md text-tertiary-fixed-dim block mb-6 uppercase tracking-wider">From $45 / Dozen</span>
+<button class="w-full py-3 border border-outline-variant rounded-lg font-label-md hover:bg-primary-container hover:text-on-primary transition-colors">Explore Flavors</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Custom Cake Section -->
+<section class="py-[120px] bg-primary text-on-primary relative overflow-hidden" id="custom">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<circle cx="0" cy="0" fill="currentColor" r="40"></circle>
+<circle cx="100" cy="100" fill="currentColor" r="40"></circle>
+</svg>
+</div>
+<div class="container mx-auto px-8 md:px-16 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="font-display-lg text-on-primary mb-8 italic">Create Your <span class="text-tertiary-fixed">Dream</span> Cake</h2>
+<p class="font-body-lg text-on-primary/80 mb-12">From flavor swatches to architectural design, collaborate with our master pastry chefs to create a centerpiece that tells your story. Our process is as refined as our ingredients.</p>
+<ul class="space-y-6">
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary-fixed">palette</span>
+<span class="font-label-md">Custom Flavor Profiles</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary-fixed">draw</span>
+<span class="font-label-md">Digital Design Sketching</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary-fixed">workspace_premium</span>
+<span class="font-label-md">Premium Organic Sourcing</span>
+</li>
+</ul>
+</div>
+<div class="bg-surface p-12 rounded-3xl text-on-surface shadow-2xl">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-sm uppercase tracking-widest text-on-surface-variant">Name</label>
+<input class="w-full bg-transparent border-b-2 border-outline-variant focus:border-tertiary-fixed-dim focus:ring-0 transition-colors p-2" placeholder="Your Name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm uppercase tracking-widest text-on-surface-variant">Phone</label>
+<input class="w-full bg-transparent border-b-2 border-outline-variant focus:border-tertiary-fixed-dim focus:ring-0 transition-colors p-2" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm uppercase tracking-widest text-on-surface-variant">Cake Type</label>
+<select class="w-full bg-transparent border-b-2 border-outline-variant focus:border-tertiary-fixed-dim focus:ring-0 transition-colors p-2">
+<option>Wedding Celebration</option>
+<option>Artisanal Birthday</option>
+<option>Corporate Gala</option>
+<option>Other Milestone</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm uppercase tracking-widest text-on-surface-variant">Your Vision</label>
+<textarea class="w-full bg-transparent border-b-2 border-outline-variant focus:border-tertiary-fixed-dim focus:ring-0 transition-colors p-2" placeholder="Tell us about the occasion and any design inspirations..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary font-label-md py-5 rounded-xl hover:shadow-lg transition-all scale-100 active:scale-95 uppercase tracking-[0.2em]">Send Design Inquiry</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="py-[120px] bg-secondary-container" id="reviews">
+<div class="container mx-auto px-8 md:px-16 text-center mb-16">
+<h2 class="font-headline-xl text-on-secondary-container italic mb-4">Sweet Testimonials</h2>
+<div class="w-24 h-1 bg-on-secondary-container/20 mx-auto"></div>
+</div>
+<div class="container mx-auto px-8 md:px-16">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Review 1 -->
+<div class="glass-card p-10 rounded-3xl">
+<div class="flex text-tertiary-fixed-dim mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-primary italic mb-8 leading-relaxed">"The wedding cake was more than we ever dreamed of. Not only was it a visual masterpiece, but the Madagascar Vanilla sponge was incredibly moist."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-outline-variant overflow-hidden">
+<img alt="Customer Profile" data-alt="A portrait of a smiling woman with a joyful expression, photographed in a clean, modern studio setting with warm, soft lighting. She represents a happy client of the luxury bakery. The image has a high-end lifestyle aesthetic with professional lighting and a shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvdTorAw5vrwxxluh6FsIaFOLj5h-mCrtsls2pZcAsp5mSDK1SpWVS9FoY01gPgeXDOdDPc6L7gp6SazKCf40kypTKU4SrBnwGAVaGiAWGAkhtDBBd1x9E19krxWy3W_0nzr863ujbCTBdYrqagMaiROKVa6X2q0S21_FtolYYk53a4OHCYUxqQv0WrkV5EUpwv06rJfOwiRQSCXNn_klY1DlsPpPCim9iqOUeYNPgibSi7KDDZsFV81U6WiO7oE2q5D7NEUnL2h9M"/>
+</div>
+<div class="text-left">
+<p class="font-label-md text-primary">Eleanor Vance</p>
+<p class="font-label-sm text-on-surface-variant">Married Oct 2023</p>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="glass-card p-10 rounded-3xl">
+<div class="flex text-tertiary-fixed-dim mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-primary italic mb-8 leading-relaxed">"Cake Breaker is our go-to for corporate events. Their attention to detail and ability to incorporate brand colors into artisanal desserts is unmatched."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-outline-variant overflow-hidden">
+<img alt="Customer Profile" data-alt="A portrait of a professional man in a business casual outfit, smiling warmly towards the camera. The background is a sophisticated office environment with blurred lights. The image conveys trust and high-end service quality, matching the luxury brand's corporate clientele." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIY0UlyZ1jHdlEsIE3uAjb0Myq5pak92zHOqS19V11Z3SzhutymNW7JU3Smq9mLLaUP4AnYmwyzJFWDmYXQPZpMOd0vwZxmNGEC8WdIwLzIJSvi7a67f2-qXf8rD3MAqrIXbV9Kh_6p5AR6z5X4kekwGcDf5HPk3YEwPvIBV2Q2B4aCrA4p6cf9DbjD5ZDn4-cll5aCC2eyWvOwcyQ6gRBqaT2CjAJ0YxND_tyIwKnL4X1NUqnFDOaVIN5kNKaToNN25-wkJoLLcRX"/>
+</div>
+<div class="text-left">
+<p class="font-label-md text-primary">Julian Thorne</p>
+<p class="font-label-sm text-on-surface-variant">Thorne Media Group</p>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="glass-card p-10 rounded-3xl">
+<div class="flex text-tertiary-fixed-dim mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-primary italic mb-8 leading-relaxed">"The custom birthday cake for my daughter was almost too beautiful to eat. Almost. The salted caramel layer was heavenly. Highly recommend!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-outline-variant overflow-hidden">
+<img alt="Customer Profile" data-alt="A portrait of a creative woman with a friendly, artistic vibe. She is photographed in a well-lit, minimalist interior space. The lighting is soft and natural, emphasizing a high-end lifestyle. This profile represents the brand's sophisticated and family-oriented customer segment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTP5kKuG0WWicN0VuE5s05eHKGHT3Ilgv_a2JzivRjEZzGv4ECvXVDcfqO4RNsSXvAcaxBfgMata7TPB77K85K6sehOkAzgpIgKm_jlooAnIuv-8agWrzc5EGUdyiwn5TgPkvq_wq4xIy9z1UBx2dWCpipxVxlLHXLnaczs0qiT_n5uku6W978FJdZGRdyGq7tM2Jl2GGaTIZkj9P2Nv_YxkIr_UI6PaznIGmHhVfl2z0l4nYn4kv_O1bcbFcGI3C5EuhNZUSPhbDC"/>
+</div>
+<div class="text-left">
+<p class="font-label-md text-primary">Sienna Reed</p>
+<p class="font-label-sm text-on-surface-variant">Artist &amp; Mother</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section class="py-[120px] bg-background" id="about">
+<div class="container mx-auto px-8 md:px-16">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative z-10">
+<img alt="The Head Baker" class="w-full h-full object-cover" data-alt="A professional head pastry chef in a clean white uniform, meticulously adding fine gold leaf detail to a chocolate cake in a bright, modern, high-end bakery kitchen. The kitchen is visible in the background, featuring stainless steel surfaces and professional baking equipment, all beautifully lit with soft, ambient lighting. The mood is one of focused craftsmanship and high-level artisanal skill." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjncb6sgeCvgrFwMGGPA6LO4SpwhBASW5rZNTeNfP8V6TDj_p0ZI3Ir59Aff_aaTfvTVjxmQGq0Uvf6TyAUIGUDcHu9BrmW6FuHPijJscswAeP69K3jIzGbnPwZTC45mrpi7AUMBkJ93txKW0YgBhiTtfyZABOuUn2cpXk5eOIOcJ4TpF8NxcciS35w1jh1monY2-9xUGiA05bTxN7rrgtfPzZc52fMO-c2n1CiN8YxrgRrfk_m-FxRNtoHRtSWVGALV9UcfIT2t4Y"/>
+</div>
+<div class="absolute -bottom-10 -right-10 w-64 h-64 bg-secondary-container rounded-3xl -z-0 hidden md:block"></div>
+</div>
+<div class="space-y-8">
+<span class="font-label-sm uppercase tracking-widest text-[#D4AF37]">The Artisanal Process</span>
+<h2 class="font-display-lg text-primary italic">Beyond Just Baking</h2>
+<p class="font-body-lg text-on-surface-variant leading-relaxed">Founded by Chef Isabella Vane, Smiley Bakers began with a simple mission: to elevate patisserie into an architectural art form. We don't just bake cakes; we engineer experiences that engage all five senses.</p>
+<p class="font-body-md text-on-surface-variant leading-relaxed">Our ingredients are sourced from small-batch organic producers. From the heirloom cocoa beans of Ecuador to the floral-infused honeys of the Alps, every element is chosen for its purity and pedigree.</p>
+<div class="pt-8">
+<button class="font-label-md text-primary flex items-center gap-2 group">
+                            Read Our Full Story 
+                            <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">trending_flat</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Map Section -->
+<section class="py-[120px] bg-surface-container-low" id="contact">
+<div class="container mx-auto px-8 md:px-16">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div>
+<h2 class="font-headline-xl text-primary italic mb-10">Visit Our Boutique</h2>
+<div class="space-y-12">
+<div class="flex items-start gap-6">
+<span class="material-symbols-outlined p-4 bg-white text-on-tertiary-container rounded-2xl shadow-sm">location_on</span>
+<div>
+<h4 class="font-headline-md text-primary mb-2">Location</h4>
+<p class="font-body-md text-on-surface-variant">1245 Confectionary Row, <br/>London, UK SW1A 1AA</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<span class="material-symbols-outlined p-4 bg-white text-on-tertiary-container rounded-2xl shadow-sm">call</span>
+<div>
+<h4 class="font-headline-md text-primary mb-2">Inquiries</h4>
+<p class="font-body-md text-on-surface-variant">+44 (20) 7946 0123 <br/>hello@cakebreaker.com</p>
+</div>
+</div>
+<button class="flex items-center gap-4 bg-[#25D366] text-white px-8 py-4 rounded-xl font-label-md hover:shadow-lg transition-all">
+<span class="material-symbols-outlined">chat</span>
+                            Message on WhatsApp
+                        </button>
+</div>
+</div>
+<div class="h-[500px] bg-outline-variant rounded-3xl overflow-hidden shadow-inner grayscale contrast-125">
+<img alt="Map" class="w-full h-full object-cover opacity-80" data-alt="A stylized, high-contrast map of a luxury city district, rendered in a minimalist monochromatic palette of soft greys and deep charcoals. The map features elegant typography and subtle gold markers for key locations. The lighting is digital and clean, suggesting a premium, tech-forward navigation experience within a luxury brand's digital ecosystem." data-location="London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj3aK0FqImwyDv0_Ked5zoM2NX7_o-AsNCw8LuuAtc_ZDiOq47W0Gx93ikSGNAbVR0w9GwFHIDdW5pIZM8reHuVI1Kje6YqKr_bhMbjaqTIeuJ4b-a5hgCpaPzm5-o0YhwCQiYZOWs7OK_cBuRF22BtDWvDwIZlmRbXsTmf5TiJ6QY9jtJHD65j1NY-FbSCAcBkb9QXNigLhJyOqK7Uhpj0lZu7xwvn553InlgQhS5VmYW0TFAXVCVLIGeQZCunMPtN56W7Y9Ic4kR"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#3D2B1F] dark:bg-stone-950 text-[#FAF9F6] border-t-4 border-[#D4AF37] w-full mt-auto">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-20 md:px-24">
+<div class="col-span-1 md:col-span-1">
+<span class="text-xl font-serif text-[#D4AF37] mb-4 block">Cake Breaker</span>
+<p class="font-['Noto_Serif'] text-sm tracking-wide leading-relaxed text-[#FAF9F6]/60">Elevating the art of the celebration through architectural patisserie and artisanal craftsmanship since 2024.</p>
+</div>
+<div>
+<h4 class="font-['Noto_Serif'] text-sm font-bold uppercase tracking-widest text-[#D4AF37] mb-6">Contact</h4>
+<ul class="space-y-4 font-['Noto_Serif'] text-sm tracking-wide">
+<li><a class="text-[#FAF9F6]/60 hover:text-[#D4AF37] transition-colors" href="#">Location</a></li>
+<li><a class="text-[#FAF9F6]/60 hover:text-[#D4AF37] transition-colors" href="#">Phone</a></li>
+<li><a class="text-[#FAF9F6]/60 hover:text-[#D4AF37] transition-colors" href="#">WhatsApp Us</a></li>
+<li><a class="text-[#FAF9F6]/60 hover:text-[#D4AF37] transition-colors" href="#">Map View</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-['Noto_Serif'] text-sm font-bold uppercase tracking-widest text-[#D4AF37] mb-6">Social</h4>
+<ul class="space-y-4 font-['Noto_Serif'] text-sm tracking-wide">
+<li><a class="text-[#FAF9F6]/60 hover:text-[#D4AF37] transition-colors" href="#">Instagram</a></li>
+<li><a class="text-[#FAF9F6]/60 hover:text-[#D4AF37] transition-colors" href="#">Pinterest</a></li>
+<li><a class="text-[#FAF9F6]/60 hover:text-[#D4AF37] transition-colors" href="#">Facebook</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-['Noto_Serif'] text-sm font-bold uppercase tracking-widest text-[#D4AF37] mb-6">Newsletter</h4>
+<p class="text-[#FAF9F6]/60 text-sm mb-6">Subscribe for exclusive collection previews.</p>
+<div class="flex">
+<input class="bg-white/10 border-none rounded-l-lg p-3 w-full focus:ring-1 focus:ring-[#D4AF37] text-sm" placeholder="Email Address" type="email"/>
+<button class="bg-[#D4AF37] text-[#3D2B1F] px-4 rounded-r-lg font-bold">Join</button>
+</div>
+</div>
+</div>
+<div class="border-t border-[#FAF9F6]/10 py-8 text-center px-8">
+<p class="font-['Noto_Serif'] text-sm tracking-wide text-[#FAF9F6]/40">© 2024 Cake Breaker Luxury Patisserie. All rights reserved.</p>
+</div>
+</footer>
+</body></html>
