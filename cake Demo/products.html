@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Cakes | Smiley Bakers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="Assests/logo.jpeg" alt="Logo" style="height: 65px; width: 65px; border-radius: 50%; object-fit: cover;"> Smiley<span>Bakers</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html" class="active">Cakes</a></li>
+        <li><a href="custom-orders.html">Custom Orders</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem;"><i class="ri-search-line"></i></a>
+        <a href="#" class="btn btn-primary" style="padding: 0.5rem 1.5rem;"><i class="ri-shopping-bag-line"></i> Order Now</a>
+      </div>
+      <div class="hamburger"><i class="ri-menu-line"></i></div>
+    </div>
+  </nav>
+
+  <!-- Hero Section for Products -->
+  <header class="products-hero">
+    <div class="container text-center">
+      <h1 class="section-title">Explore Our <span class="text-gold">Masterpieces</span></h1>
+      <p class="section-subtitle">From elegant wedding tiers to fun kids' themes.</p>
+    </div>
+  </header>
+
+  <!-- Products Filter and Grid -->
+  <section class="products-section section-padding">
+    <div class="container">
+      <!-- Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All Cakes</button>
+        <button class="filter-btn" data-filter="girls">For Girls</button>
+        <button class="filter-btn" data-filter="boys">For Boys</button>
+        <button class="filter-btn" data-filter="wedding">Wedding</button>
+        <button class="filter-btn" data-filter="anniversary">Anniversary</button>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid" id="cake-grid">
+        
+        <!-- Girls Cakes -->
+        <div class="product-card glass-panel cake-item" data-category="girls">
+          <div class="product-img">
+            <img src="Assests/For Girls/-6055301132109680678_121.jpg" alt="Girls Cake 1">
+          </div>
+          <div class="product-info">
+            <h4>Princess Castle Cake</h4>
+            <p class="price">₹1200 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="girls">
+          <div class="product-img">
+            <img src="Assests/For Girls/-6055359165707784673_121.jpg" alt="Girls Cake 2">
+          </div>
+          <div class="product-info">
+            <h4>Magical Unicorn Cake</h4>
+            <p class="price">₹1450 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="girls">
+          <div class="product-img">
+            <img src="Assests/For Girls/-6055359165707784675_121.jpg" alt="Girls Cake 3">
+          </div>
+          <div class="product-info">
+            <h4>Fairy Theme Cake</h4>
+            <p class="price">₹1350 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <!-- Boys Cakes -->
+        <div class="product-card glass-panel cake-item" data-category="boys">
+          <div class="product-img">
+            <img src="Assests/For Boys/IMG_20260510_142823_132.jpg" alt="Boys Cake 1">
+          </div>
+          <div class="product-info">
+            <h4>Avenger Hero Cake</h4>
+            <p class="price">₹1300 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="boys">
+          <div class="product-img">
+            <img src="Assests/For Boys/IMG_20260510_142824_649.jpg" alt="Boys Cake 2">
+          </div>
+          <div class="product-info">
+            <h4>Space Explorer Cake</h4>
+            <p class="price">₹1500 <span>/ 1.5 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <!-- Wedding Cakes -->
+        <div class="product-card glass-panel cake-item" data-category="wedding">
+          <div class="product-img">
+            <img src="Assests/Wedding/-6055359165707784669_121.jpg" alt="Wedding Cake 1">
+          </div>
+          <div class="product-info">
+            <h4>Classic White Tier</h4>
+            <p class="price">₹4500 <span>/ 3 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="wedding">
+          <div class="product-img">
+            <img src="Assests/Wedding/-6055359165707784670_120.jpg" alt="Wedding Cake 2">
+          </div>
+          <div class="product-info">
+            <h4>Floral Romance Cake</h4>
+            <p class="price">₹5000 <span>/ 3 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="wedding">
+          <div class="product-img">
+            <img src="Assests/Wedding/-6055359165707784671_121.jpg" alt="Wedding Cake 3">
+          </div>
+          <div class="product-info">
+            <h4>Elegant Gold Tier</h4>
+            <p class="price">₹5500 <span>/ 3 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="wedding">
+          <div class="product-img">
+            <img src="Assests/Wedding/-6055359165707784672_121.jpg" alt="Wedding Cake 4">
+          </div>
+          <div class="product-info">
+            <h4>Rustic Charm Cake</h4>
+            <p class="price">₹4800 <span>/ 3 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <!-- All Other Cakes -->
+        <div class="product-card glass-panel cake-item" data-category="general">
+          <div class="product-img">
+            <img src="Assests/All Cakes/-6055301132109680678_121.jpg" alt="Premium Custom Cake">
+          </div>
+          <div class="product-info">
+            <h4>Premium Custom Cake</h4>
+            <p class="price">₹950 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="general">
+          <div class="product-img">
+            <img src="Assests/All Cakes/-6055359165707784674_121.jpg" alt="Special Design Cake">
+          </div>
+          <div class="product-info">
+            <h4>Special Design Cake</h4>
+            <p class="price">₹1050 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="general">
+          <div class="product-img">
+            <img src="Assests/All Cakes/IMG_20260510_144709_015.jpg" alt="Delightful Cake">
+          </div>
+          <div class="product-info">
+            <h4>Delightful Cake</h4>
+            <p class="price">₹850 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="general">
+          <div class="product-img">
+            <img src="Assests/All Cakes/IMG_20260510_144709_206.jpg" alt="Signature Cake">
+          </div>
+          <div class="product-info">
+            <h4>Signature Cake</h4>
+            <p class="price">₹900 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="general">
+          <div class="product-img">
+            <img src="Assests/All Cakes/IMG_20260510_144709_216.jpg" alt="Celebration Cake">
+          </div>
+          <div class="product-info">
+            <h4>Celebration Cake</h4>
+            <p class="price">₹1100 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="general">
+          <div class="product-img">
+            <img src="Assests/All Cakes/IMG_20260510_144709_239.jpg" alt="Festive Cake">
+          </div>
+          <div class="product-info">
+            <h4>Festive Cake</h4>
+            <p class="price">₹950 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="general">
+          <div class="product-img">
+            <img src="Assests/All Cakes/IMG_20260510_144709_371-Picsart-AiImageEnhancer.jpg" alt="Enhanced Luxury Cake">
+          </div>
+          <div class="product-info">
+            <h4>Enhanced Luxury Cake</h4>
+            <p class="price">₹1500 <span>/ 1.5 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="general">
+          <div class="product-img">
+            <img src="Assests/All Cakes/IMG_20260510_144709_371.jpg" alt="Luxury Cake">
+          </div>
+          <div class="product-info">
+            <h4>Luxury Cake</h4>
+            <p class="price">₹1200 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="general">
+          <div class="product-img">
+            <img src="Assests/All Cakes/IMG_20260510_144709_406.jpg" alt="Classic Cake">
+          </div>
+          <div class="product-info">
+            <h4>Classic Cake</h4>
+            <p class="price">₹850 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="general">
+          <div class="product-img">
+            <img src="Assests/All Cakes/IMG_20260510_144709_425.jpg" alt="Party Cake">
+          </div>
+          <div class="product-info">
+            <h4>Party Cake</h4>
+            <p class="price">₹950 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="general">
+          <div class="product-img">
+            <img src="Assests/All Cakes/IMG_20260510_144709_629.jpg" alt="Artisan Cake">
+          </div>
+          <div class="product-info">
+            <h4>Artisan Cake</h4>
+            <p class="price">₹1050 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="general">
+          <div class="product-img">
+            <img src="Assests/All Cakes/IMG_20260510_150747_606.jpg" alt="Gourmet Cake">
+          </div>
+          <div class="product-info">
+            <h4>Gourmet Cake</h4>
+            <p class="price">₹1150 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="general">
+          <div class="product-img">
+            <img src="Assests/All Cakes/IMG_20260510_150747_697.jpg" alt="Choco Delight Cake">
+          </div>
+          <div class="product-info">
+            <h4>Choco Delight Cake</h4>
+            <p class="price">₹900 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="general">
+          <div class="product-img">
+            <img src="Assests/All Cakes/IMG_20260510_150747_724.jpg" alt="Vanilla Dream Cake">
+          </div>
+          <div class="product-info">
+            <h4>Vanilla Dream Cake</h4>
+            <p class="price">₹850 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="general">
+          <div class="product-img">
+            <img src="Assests/All Cakes/IMG_20260510_150748_113.jpg" alt="Strawberry Bliss Cake">
+          </div>
+          <div class="product-info">
+            <h4>Strawberry Bliss Cake</h4>
+            <p class="price">₹950 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="general">
+          <div class="product-img">
+            <img src="Assests/All Cakes/IMG_20260510_150748_182.jpg" alt="Red Velvet Cake">
+          </div>
+          <div class="product-info">
+            <h4>Red Velvet Cake</h4>
+            <p class="price">₹1000 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="general">
+          <div class="product-img">
+            <img src="Assests/All Cakes/IMG_20260510_150748_190.jpg" alt="Butterscotch Cake">
+          </div>
+          <div class="product-info">
+            <h4>Butterscotch Cake</h4>
+            <p class="price">₹850 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass-panel cake-item" data-category="general">
+          <div class="product-img">
+            <img src="Assests/All Cakes/IMG_20260510_150748_267.jpg" alt="Fruit Overload Cake">
+          </div>
+          <div class="product-info">
+            <h4>Fruit Overload Cake</h4>
+            <p class="price">₹1100 <span>/ 1 kg</span></p>
+            <button class="btn btn-primary add-to-cart"><i class="ri-shopping-cart-2-line"></i> View Details</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo" style="color:var(--bg-color)">
+            <img src="Assests/logo.jpeg" alt="Logo" style="height: 65px; width: 65px; border-radius: 50%; object-fit: cover;"> Smiley<span style="color:var(--primary-color)">Bakers</span>
+          </a>
+          <p style="margin-top:1rem; color:#aaa;">Premium bakery bringing joy and sweetness to your special moments. Handcrafted with love since 2016.</p>
+          <div class="social-links">
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-twitter-x-line"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="products.html">Cakes Menu</a></li>
+            <li><a href="custom-orders.html">Custom Orders</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Visit Us</h4>
+          <p><i class="ri-map-pin-line"></i> Shop 32, Renuka Complex, More Chowk, <br>Bajaj Nagar, Waluj MIDC, Aurangabad 431136</p>
+          <p><i class="ri-phone-line"></i> +91 99999 99999</p>
+          <p><i class="ri-mail-line"></i> info@smileybakers.com</p>
+          <p><i class="ri-time-line"></i> Mon - Sun: Open 24 Hours</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Smiley Bakers. All Rights Reserved. Designed with premium aesthetics.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <!-- specific script for products filtering -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const cakeItems = document.querySelectorAll('.cake-item');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all
+          filterBtns.forEach(b => b.classList.remove('active'));
+          // Add active class to clicked
+          btn.classList.add('active');
+
+          const filterValue = btn.getAttribute('data-filter');
+
+          cakeItems.forEach(item => {
+            if(filterValue === 'all') {
+              item.style.display = 'block';
+              // Add a slight animation
+              item.style.animation = 'fadeIn 0.5s ease forwards';
+            } else {
+              if(item.getAttribute('data-category') === filterValue) {
+                item.style.display = 'block';
+                item.style.animation = 'fadeIn 0.5s ease forwards';
+              } else {
+                item.style.display = 'none';
+              }
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

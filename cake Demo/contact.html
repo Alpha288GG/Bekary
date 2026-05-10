@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Smiley Bakers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <style>
+    .contact-hero {
+      background: var(--soft-beige);
+      padding: 150px 0 80px;
+      text-align: center;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 4rem;
+    }
+    .contact-info-card {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: var(--shadow-md);
+    }
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .info-icon {
+      background: var(--soft-beige);
+      color: var(--primary-color);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .contact-form {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: var(--shadow-md);
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      font-family: var(--font-body);
+      font-size: 1rem;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+    }
+    .map-container {
+      margin-top: 4rem;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      height: 400px;
+    }
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="Assests/logo.jpeg" alt="Logo" style="height: 65px; width: 65px; border-radius: 50%; object-fit: cover;"> Smiley<span>Bakers</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Cakes</a></li>
+        <li><a href="custom-orders.html">Custom Orders</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#" class="btn btn-primary" style="padding: 0.5rem 1.5rem;"><i class="ri-shopping-bag-line"></i> Order Now</a>
+      </div>
+      <div class="hamburger"><i class="ri-menu-line"></i></div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="contact-hero">
+    <div class="container">
+      <h1 class="section-title">Get In <span class="text-gold">Touch</span></h1>
+      <p class="section-subtitle">We'd love to hear from you. Visit our shop or message us directly.</p>
+    </div>
+  </header>
+
+  <!-- Contact Content -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info-card">
+          <h2 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 2rem;">Store Information</h2>
+          
+          <div class="info-item">
+            <div class="info-icon"><i class="ri-map-pin-fill"></i></div>
+            <div>
+              <h4 style="font-size: 1.2rem; margin-bottom: 0.3rem;">Address</h4>
+              <p style="color: #666; line-height: 1.5;">Shop No 32, Renuka Complex, More Chowk, Opp. Dagadoji Deshmukh College, Bajaj Nagar, Waluj MIDC, Aurangabad, Maharashtra 431136</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon"><i class="ri-phone-fill"></i></div>
+            <div>
+              <h4 style="font-size: 1.2rem; margin-bottom: 0.3rem;">Call or WhatsApp</h4>
+              <p style="color: #666;">+91 99999 99999 <br> <span style="font-size: 0.9rem; color: #25D366; font-weight: 500;"><i class="ri-whatsapp-line"></i> WhatsApp Available</span></p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="ri-time-fill"></i></div>
+            <div>
+              <h4 style="font-size: 1.2rem; margin-bottom: 0.3rem;">Opening Hours</h4>
+              <p style="color: #666;">Monday - Sunday <br> Open 24 Hours</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h2 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 2rem;">Send a Message</h2>
+          <form action="#">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" rows="4" placeholder="How can we help you?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Google Maps Embed -->
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.610996825225!2d75.24410937583648!3d19.84113168152579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9bd7f40c9437%3A0xd69e78b264c6a228!2sSmiley%20Bakers!5e0!3m2!1sen!2sin!4v1701151034050!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo" style="color:var(--bg-color)">
+            <img src="Assests/logo.jpeg" alt="Logo" style="height: 65px; width: 65px; border-radius: 50%; object-fit: cover;"> Smiley<span style="color:var(--primary-color)">Bakers</span>
+          </a>
+          <p style="margin-top:1rem; color:#aaa;">Premium bakery bringing joy and sweetness to your special moments. Handcrafted with love since 2016.</p>
+          <div class="social-links">
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-twitter-x-line"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="products.html">Cakes Menu</a></li>
+            <li><a href="custom-orders.html">Custom Orders</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Visit Us</h4>
+          <p><i class="ri-map-pin-line"></i> Shop 32, Renuka Complex, More Chowk, <br>Bajaj Nagar, Waluj MIDC, Aurangabad 431136</p>
+          <p><i class="ri-phone-line"></i> +91 99999 99999</p>
+          <p><i class="ri-mail-line"></i> info@smileybakers.com</p>
+          <p><i class="ri-time-line"></i> Mon - Sun: Open 24 Hours</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Smiley Bakers. All Rights Reserved. Designed with premium aesthetics.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

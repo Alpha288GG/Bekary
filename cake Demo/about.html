@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Smiley Bakers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <style>
+    .about-hero {
+      background: var(--soft-beige);
+      padding: 150px 0 80px;
+      text-align: center;
+    }
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      margin-top: 4rem;
+    }
+    .about-text {
+      flex: 1;
+    }
+    .about-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .about-text p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      color: #555;
+    }
+    .about-image {
+      flex: 1;
+    }
+    .about-image img {
+      border-radius: 20px;
+      box-shadow: var(--shadow-lg);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .stat-card {
+      background: var(--bg-color);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: var(--shadow-sm);
+    }
+    .stat-number {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    @media (max-width: 768px) {
+      .about-content { flex-direction: column; }
+      .stats-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="Assests/logo.jpeg" alt="Logo" style="height: 65px; width: 65px; border-radius: 50%; object-fit: cover;"> Smiley<span>Bakers</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="products.html">Cakes</a></li>
+        <li><a href="custom-orders.html">Custom Orders</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#" class="btn btn-primary" style="padding: 0.5rem 1.5rem;"><i class="ri-shopping-bag-line"></i> Order Now</a>
+      </div>
+      <div class="hamburger"><i class="ri-menu-line"></i></div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="about-hero">
+    <div class="container">
+      <h1 class="section-title">Our <span class="text-gold">Story</span></h1>
+      <p class="section-subtitle">Serving sweetness and smiles to Aurangabad since 2016.</p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1556217477-d325251ece38?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Smiley Bakers Kitchen">
+        </div>
+        <div class="about-text">
+          <h2>Baking Joy Since <span class="text-gold">2016</span></h2>
+          <p>Located in the heart of Bajaj Nagar, Waluj MIDC, <strong>Smiley Bakers</strong> started with a simple mission: to create the finest cakes, pastries, snacks, and fast food that bring people together.</p>
+          <p>From custom celebration cakes to everyday desserts and savory snacks, our expert bakers use only premium ingredients to ensure every bite brings a smile to your face. We pride ourselves on being a trusted local bakery that feels like home.</p>
+          
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number">2016</div>
+              <p>Established</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">24/7</div>
+              <p>Always Open</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">10k+</div>
+              <p>Happy Customers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo" style="color:var(--bg-color)">
+            <img src="Assests/logo.jpeg" alt="Logo" style="height: 65px; width: 65px; border-radius: 50%; object-fit: cover;"> Smiley<span style="color:var(--primary-color)">Bakers</span>
+          </a>
+          <p style="margin-top:1rem; color:#aaa;">Premium bakery bringing joy and sweetness to your special moments. Handcrafted with love since 2016.</p>
+          <div class="social-links">
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-twitter-x-line"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="products.html">Cakes Menu</a></li>
+            <li><a href="custom-orders.html">Custom Orders</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Visit Us</h4>
+          <p><i class="ri-map-pin-line"></i> Shop 32, Renuka Complex, More Chowk, <br>Bajaj Nagar, Waluj MIDC, Aurangabad 431136</p>
+          <p><i class="ri-phone-line"></i> +91 99999 99999</p>
+          <p><i class="ri-mail-line"></i> info@smileybakers.com</p>
+          <p><i class="ri-time-line"></i> Mon - Sun: Open 24 Hours</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Smiley Bakers. All Rights Reserved. Designed with premium aesthetics.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

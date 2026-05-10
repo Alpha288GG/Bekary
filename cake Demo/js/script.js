@@ -1,117 +1,62 @@
-/**
- * Cake Breaker - Premium Bakery
- * Main JavaScript File
- */
-
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Menu Toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    
-    if (hamburger) {
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            
-            // Toggle hamburger icon between bars and times
-            const icon = hamburger.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-            } else {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            }
-        });
+// Wait for DOM to load
+document.addEventListener("DOMContentLoaded", () => {
+  // --- Navbar Sticky & Scroll Effect ---
+  const navbar = document.getElementById("navbar");
+  
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
     }
+  });
 
-    // Close mobile menu when clicking a link
-    const links = document.querySelectorAll('.nav-links a');
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            const icon = hamburger.querySelector('i');
-            icon.classList.remove('fa-xmark');
-            icon.classList.add('fa-bars');
-        });
+  // --- Mobile Menu Toggle ---
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+  const navActions = document.querySelector(".nav-actions");
+
+  if (hamburger) {
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("mobile-active");
+      if(navActions) {
+        navActions.classList.toggle("mobile-active");
+      }
+      
+      // Toggle Hamburger Icon
+      const icon = hamburger.querySelector('i');
+      if(navLinks.classList.contains("mobile-active")) {
+        icon.classList.remove('ri-menu-line');
+        icon.classList.add('ri-close-line');
+      } else {
+        icon.classList.remove('ri-close-line');
+        icon.classList.add('ri-menu-line');
+      }
     });
+  }
 
-    // 2. Navbar Scroll Effect
-    const navbar = document.getElementById('navbar');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
+  // --- Scroll Animations (Intersection Observer) ---
+  const animatedElements = document.querySelectorAll('.category-card, .product-card, .why-img, .why-content');
+  
+  // Initially hide elements
+  animatedElements.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
     });
+  }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  });
 
-    // 3. Scroll Reveal Animation
-    const reveals = document.querySelectorAll('.reveal');
-
-    function checkReveal() {
-        const windowHeight = window.innerHeight;
-        const elementVisible = 100;
-
-        reveals.forEach((reveal) => {
-            const elementTop = reveal.getBoundingClientRect().top;
-
-            if (elementTop < windowHeight - elementVisible) {
-                reveal.classList.add('active');
-            }
-        });
-    }
-
-    // Trigger on load
-    checkReveal();
-    // Trigger on scroll
-    window.addEventListener('scroll', checkReveal);
-
-    // 4. Form Submission Handling (Prevent Default for Demo)
-    const customForm = document.getElementById('customForm');
-    if (customForm) {
-        customForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = customForm.querySelector('button[type="submit"]');
-            const originalText = btn.innerText;
-            
-            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending...';
-            btn.disabled = true;
-
-            // Simulate API Call
-            setTimeout(() => {
-                btn.innerHTML = '<i class="fa-solid fa-check"></i> Request Sent!';
-                btn.classList.replace('btn-primary', 'btn-whatsapp'); // turn green to indicate success temporarily
-                customForm.reset();
-
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.classList.replace('btn-whatsapp', 'btn-primary');
-                    btn.disabled = false;
-                }, 3000);
-            }, 1500);
-        });
-    }
-
-    // 5. Active Link Highlight on Scroll
-    const sections = document.querySelectorAll('section, header');
-    const navItems = document.querySelectorAll('.nav-links a');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (scrollY >= (sectionTop - 200)) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navItems.forEach(item => {
-            item.classList.remove('active');
-            if (item.getAttribute('href') === `#${current}`) {
-                item.classList.add('active');
-            }
-        });
-    });
+  animatedElements.forEach(el => observer.observe(el));
 });
